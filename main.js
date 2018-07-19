@@ -7,7 +7,7 @@ $(document).ready(function() {
       "NewButton" + counter
     );
 
-    newButtonDiv.html(
+    let divTag = newButtonDiv.html(
       " </label>" +
         '<input type="button" name="' +
         counter +
@@ -15,8 +15,17 @@ $(document).ready(function() {
         counter +
         '" value="' +
         counter +
+        '" style="background-color: blue; color: white' +
         '" >'
     );
+    if (counter % 2 == 0) {
+      let v = divTag[0];
+      v.getElementsByTagName("input")[0].style.backgroundColor = "black";
+    }
+    if (counter % 5 == 0) {
+      let c = divTag[0];
+      c.getElementsByTagName("input")[0].style.borderTop = "4px solid Orange";
+    }
 
     newButtonDiv.appendTo("#ButtonsGroup");
     document.getElementById("count").innerHTML = "Counter = " + counter;
