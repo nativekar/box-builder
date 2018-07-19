@@ -19,7 +19,7 @@ $(document).ready(function() {
     );
 
     newButtonDiv.appendTo("#ButtonsGroup");
-
+    document.getElementById("count").innerHTML = "Counter = " + counter;
     counter++;
   });
 
@@ -28,10 +28,10 @@ $(document).ready(function() {
       alert("No Buttons left to remove!");
       return false;
     }
-
     counter--;
-
     $("#NewButton" + counter).remove();
+    var delCount = counter - 1;
+    document.getElementById("count").innerHTML = "Counter = " + delCount;
   });
 
   $("#getButtonValue").click(function() {
