@@ -1,59 +1,54 @@
 <html>
-
-<head>
-    <title>Box Builder</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <style>
-        .wrapper {
-            text-align: center;
-        }
-
-        #addButton,
-        #removeButton {
-            border: none;
-            padding: 15px 32px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
-            color: white;
-            margin: 4px 2px;
-            cursor: pointer;
-            border-radius: 12px;
-        }
-
-        .container {
-            padding: 8px;
-        }
-        #count{
-            font-size: 20px;
-        }
-    </style>
-</head>
-
-<body>
-
-    <div class="container">
-
-        <div id="title-top">
+   <head>
+      <title>Box Builder</title>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <style>
+         html, body {
+         max-width: 100%;
+         overflow-x: hidden;
+         }
+         .wrapper {
+         text-align: center;
+         }
+         #addButton,
+         #removeButton {
+         border: none;
+         padding: 15px 32px;
+         text-align: center;
+         text-decoration: none;
+         display: inline-block;
+         font-size: 16px;
+         color: white;
+         margin: 4px 2px;
+         cursor: pointer;
+         border-radius: 12px;
+         }
+         .container {
+         padding: 8px;
+         }
+         #ButtonsGroup{
+         display: inline-flex;
+         }
+         #count{
+         font-size: 20px;
+         }
+      </style>
+   </head>
+   <body>
+      <div class="container">
+         <div id="title-top">
             <h1 style="text-align: center"> Box Builder</h1>
             <h3 style="text-align: center"> Start Building</h3>
-        </div>
-
-        <div id="NewButton">
+         </div>
+         <div id="NewButton">
             <div class="wrapper">
-                <input type='button' value='Add Button' id='addButton' style="background-color: Green">
-                <input type='button' value='Remove Button' id='removeButton' style="background-color: #f44336">
-                <p id="count"> No Boxes</p>
+               <input type='button' value='Add Button' id='addButton' style="background-color: Green">
+               <input type='button' value='Remove Button' id='removeButton' style="background-color: #f44336">
+               <p id="count"> No Boxes</p>
             </div>
-        </div>
-
-        <div id='ButtonsGroup'></div>
-
-
-    </div>
-</body>
-
-<script src="./main.js"> </script>
-
+         </div>
+         <div id='ButtonsGroup'></div>
+      </div>
+   </body>
+   <script src="./main.js"> </script>
 </html>
