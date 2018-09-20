@@ -1,7 +1,7 @@
-$(document).ready(function() {
+$(document).ready(function () {
   var counter = 1;
 
-  $("#addButton").click(function() {
+  $("#addButton").click(function () {
     var newButtonDiv = $(document.createElement("div")).attr(
       "id",
       "NewButton" + counter
@@ -9,14 +9,14 @@ $(document).ready(function() {
 
     let divTag = newButtonDiv.html(
       " </label>" +
-        '<input type="button" name="' +
-        counter +
-        '" id="button' +
-        counter +
-        '" value="' +
-        counter +
-        '" style="background-color: blue; color: white' +
-        '" >'
+      '<input type="button" name="' +
+      counter +
+      '" id="button' +
+      counter +
+      '" value="' +
+      counter +
+      '" style="background-color: blue; color: white' +
+      '" >'
     );
     if (counter % 2 == 0) {
       let v = divTag[0];
@@ -24,30 +24,27 @@ $(document).ready(function() {
     }
     if (counter % 5 == 0) {
       let c = divTag[0];
-      c.getElementsByTagName("input")[0].style.borderTop = "4px solid Orange";
+      c.getElementsByTagName("input")[0].style.borderTop = "5px solid Orange";
     }
 
     newButtonDiv.appendTo("#ButtonsGroup");
-    document.getElementById("count").innerHTML = "Counter = " + counter;
+    document.getElementById("count").innerHTML = +counter;
     counter++;
   });
 
-  $("#removeButton").click(function() {
-    if (counter == 1) {
-      alert("No Buttons left to remove!");
+  $("#removeButton").click(function () {
+    if (counter == 2) {
+      $("#NewButton1").remove();
+      document.getElementById("count").innerHTML = "No Boxes";
       return false;
+    } else {
+      counter--;
+      $("#NewButton" + counter).remove();
+      var delCount = counter - 1;
+      document.getElementById("count").innerHTML = +delCount;
+      console.log(counter);
     }
-    counter--;
-    $("#NewButton" + counter).remove();
-    var delCount = counter - 1;
-    document.getElementById("count").innerHTML = "Counter = " + delCount;
+
   });
 
-  $("#getButtonValue").click(function() {
-    var msg = "";
-    for (i = 1; i < counter; i++) {
-      msg += "\n Textbox #" + i + " : " + $("#textbox" + i).val();
-    }
-    alert(msg);
-  });
 });
