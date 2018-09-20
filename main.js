@@ -36,13 +36,13 @@ $(document).ready(function () {
     if (counter == 2) {
       $("#NewButton1").remove();
       document.getElementById("count").innerHTML = "No Boxes";
+      counter = 1;
       return false;
     } else {
       counter--;
       $("#NewButton" + counter).remove();
       var delCount = counter - 1;
       document.getElementById("count").innerHTML = +delCount;
-      console.log(counter);
     }
 
   });
