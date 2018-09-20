@@ -16,32 +16,43 @@
             text-decoration: none;
             display: inline-block;
             font-size: 16px;
+            color: white;
             margin: 4px 2px;
             cursor: pointer;
-            width: 9%;
+            width: 10%;
+            border-radius: 12px;
         }
 
-        div {
+        .container {
             padding: 8px;
+        }
+        #count{
+            font-size: 20px;
         }
     </style>
 </head>
 
 <body>
 
-    <h1 style="text-align: center"> Box Builder</h1>
+    <div class="container">
 
-    <h3 style="text-align: center"> Start Building</h3>
+        <div id="title-top">
+            <h1 style="text-align: center"> Box Builder</h1>
+            <h3 style="text-align: center"> Start Building</h3>
+        </div>
 
-    <div id='ButtonsGroup'>
-        <div id="NewButton0">
+        <div id="NewButton">
             <div class="wrapper">
-
                 <input type='button' value='Add Button' id='addButton' style="background-color: Green">
                 <input type='button' value='Remove Button' id='removeButton' style="background-color: #f44336">
-                <p id="count"></p>
+                <p id="count"> No Boxes</p>
             </div>
+        </div>
 
+        <div id='ButtonsGroup'></div>
+
+
+    </div>
 </body>
 
 <script src="./main.js"> </script>
