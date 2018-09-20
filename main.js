@@ -37,14 +37,16 @@ $(document).ready(function () {
       $("#NewButton1").remove();
       document.getElementById("count").innerHTML = "No Boxes";
       counter = 1;
-      return false;
+      return;
     } else {
-      counter--;
-      $("#NewButton" + counter).remove();
-      var delCount = counter - 1;
-      document.getElementById("count").innerHTML = +delCount;
-    }
+      if (counter > 2) {
+        counter--;
+        $("#NewButton" + counter).remove();
+        document.getElementById("count").innerHTML = counter - 1;
+      }
 
+    }
+    return false;
   });
 
 });
